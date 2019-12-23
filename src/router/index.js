@@ -3,7 +3,7 @@ import VueRouter from "vue-router";
 import EventList from "../views/EventList";
 import EventShow from "../views/EventShow";
 import EventCreate from "../views/EventCreate";
-import User from "../views/User";
+import NotFound from "../components/NotFound";
 
 Vue.use(VueRouter);
 
@@ -14,23 +14,19 @@ const routes = [
     component: EventList
   },
   {
-    path: "/event",
-    name: "event-show",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: EventShow
-  },
-  {
     path: "/event/create",
-    name: 'event-create',
+    name: "event-create",
     component: EventCreate
   },
   {
-    path: 'user/:username',
-    name: 'user',
-    component: User,
+    path: "/event/:id",
+    name: "event-show",
+    component: EventShow,
     props: true
+  },
+  {
+    path: "*",
+    component: NotFound
   }
 ];
 
