@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link :to="{ name: 'event-create' }">Event create</router-link> |
-      <router-link :to="{ name: 'event-list' }">Event list</router-link>
-    </div>
+    <NavBar></NavBar>
     <router-view />
   </div>
 </template>
+
+<script>
+  import NavBar from "./components/NavBar";
+  export default {
+    components: {NavBar}
+  }
+
+</script>
 
 <style>
   html {
