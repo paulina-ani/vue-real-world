@@ -12,18 +12,9 @@
 <script>
     export default {
         name: "EventCard",
-        data() {
-            return {
-                event: {
-                    id: 1,
-                    title: "Beach Cleanup",
-                    date: "Tues Aug 19, 2018",
-                    time: "06.00",
-                    attendees: [
-                        { id: "abc123", name: "Paulina Ani" },
-                        { id: "def456", name: "John Doe"}
-                    ]
-                }
+        props: {
+            event: {
+                type: Object,
             }
         }
     }
