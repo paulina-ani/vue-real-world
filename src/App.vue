@@ -1,14 +1,19 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
+    <MediaBox>
+      <h2 slot="header">Paulina</h2>
+      <p slot="paragraph">Named slot testing</p>
+    </MediaBox>
     <router-view />
   </div>
 </template>
 
 <script>
   import NavBar from "./components/NavBar";
+  import MediaBox from "./components/MediaBox";
   export default {
-    components: {NavBar}
+    components: {MediaBox, NavBar}
   }
 
 </script>
