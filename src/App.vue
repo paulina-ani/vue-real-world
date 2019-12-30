@@ -3,7 +3,9 @@
     <NavBar></NavBar>
     <MediaBox>
       <h2 slot="header">Paulina</h2>
-      <p slot="paragraph">Named slot testing</p>
+      <template slot="paragraph">
+        <p>Named slot testing</p>
+      </template>
     </MediaBox>
     <router-view />
   </div>
