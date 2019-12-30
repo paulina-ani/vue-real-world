@@ -5,6 +5,7 @@
             <h4 class="title">{{ event.title }}</h4>
             <BaseIcon name="users">{{ event.attendees.length}} attending</BaseIcon>
         </div>
+        <BaseButton>SUBMIT</BaseButton>
     </router-link>
 </template>
 
